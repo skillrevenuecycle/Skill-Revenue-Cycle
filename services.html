@@ -1,153 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medical Billing & RCM Services | Skill Revenue Cycle</title>
-  <meta name="description" content="Full-service healthcare revenue cycle management: medical billing, coding, denial management, A/R recovery, credentialing, and analytics." />
-  <link rel="canonical" href="https://skillrevenuecycle.com/services.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Skill Revenue Cycle</title>
+<meta name="description" content="End-to-end revenue cycle management services: medical billing, coding, A/R and denial management, credentialing, eligibility, analytics, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F0F8FF; --surface:#ffffff; --ink:#021B39; --ink-soft:#46597a;
+  --teal:#021B39; --teal-deep:#021B39; --accent:#e0644a; --accent-deep:#c14a32;
+  --sand:#dbe7f7; --line:rgba(2,27,57,.12);
+  --radius:18px; --shadow:0 22px 48px -28px rgba(10,61,60,.55);
+  --maxw:1180px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent-deep);display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.98rem;
+  padding:.85rem 1.5rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 24px -12px rgba(224,100,74,.7)}
+.btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--teal-deep)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(0,0,0,.4)}
+.arrow{transition:transform .25s ease}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ---------- header ---------- */
+header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+  background:rgba(246,243,236,.82);border-bottom:1px solid transparent;transition:.3s ease}
+header.nav.scrolled{border-bottom-color:var(--line);background:rgba(246,243,236,.95)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-size:1.32rem;
+  font-weight:600;color:var(--teal-deep);letter-spacing:-.02em;min-width:130px;height:36px}
+.logo .mark{width:34px;height:34px;border-radius:9px;background:var(--teal);position:relative;flex:none}
+.logo .mark::before{content:"";position:absolute;inset:8px;border:2.5px solid var(--accent);
+  border-radius:50%;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(-30deg)}
+.logo .mark::after{content:"";position:absolute;right:7px;bottom:7px;width:7px;height:7px;
+  border-radius:50%;background:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-weight:500;font-size:.97rem;color:var(--ink-soft);position:relative;padding:.2rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;
+  background:var(--accent);transition:width .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:1rem}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:88px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(2,27,57,.16),transparent 65%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-120px;bottom:-180px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(224,100,74,.14),transparent 68%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.3rem);margin:1.1rem 0 1.3rem}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:34ch;margin-bottom:2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-card{background:var(--surface);border-radius:22px;padding:34px;box-shadow:var(--shadow);
+  border:1px solid var(--line);position:relative}
+.hero-card .tag{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep)}
+.hero-card h3{font-size:1.5rem;margin:.5rem 0 1.4rem}
+.statline{display:flex;justify-content:space-between;padding:1rem 0;border-top:1px solid var(--line)}
+.statline:first-of-type{border-top:none}
+.statline .num{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--teal);font-weight:600}
+.statline .lbl{font-size:.92rem;color:var(--ink-soft);max-width:14ch;text-align:right}
+.dots{position:absolute;right:-14px;top:-14px;width:80px;height:80px;z-index:-1;
+  background-image:radial-gradient(var(--teal) 1.6px,transparent 1.6px);background-size:13px 13px;opacity:.4}
+
+/* ---------- generic sections ---------- */
+section.block{padding:84px 0}
+section.alt{background:var(--surface)}
+section.deep{background:var(--teal-deep);color:#dbe9fb}
+section.deep h2,section.deep h3{color:#fff}
+section.deep .eyebrow{color:#f0a58f}
+section.deep .eyebrow::before{background:var(--accent)}
+.sec-head{max-width:62ch;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:1rem 0 .8rem}
+.sec-head p{color:var(--ink-soft);font-size:1.08rem}
+section.deep .sec-head p{color:#a9c2e4}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* ---------- card grids ---------- */
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px;transition:.3s ease;position:relative;overflow:hidden}
+section.alt .card{background:var(--bg)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.card .ico{width:52px;height:52px;border-radius:13px;background:rgba(2,27,57,.1);
+  display:grid;place-items:center;margin-bottom:1.1rem;font-size:1.5rem}
+.card h3{font-size:1.32rem;margin-bottom:.6rem}
+.card p{color:var(--ink-soft);font-size:.99rem}
+.card .more{margin-top:1.1rem;font-weight:600;color:var(--teal);display:inline-flex;gap:.4rem;font-size:.95rem}
+.card.link::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.card.link:hover::before{transform:scaleX(1)}
+
+/* ---------- stat band ---------- */
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.statband .num{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4vw,3.4rem);font-weight:600;color:#fff;line-height:1}
+.statband .lbl{color:#a9c2e4;margin-top:.5rem;font-size:.96rem}
+
+/* ---------- split feature ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split-list{list-style:none;display:flex;flex-direction:column;gap:1.4rem;margin-top:1.6rem}
+.split-list li{display:flex;gap:1rem}
+.split-list .b{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-family:'Fraunces',serif}
+.split-list h4{font-size:1.12rem;margin-bottom:.2rem}
+.split-list p{color:var(--ink-soft);font-size:.97rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:var(--shadow)}
+section.deep .panel{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);box-shadow:none}
+
+/* ---------- process steps ---------- */
+.steps{counter-reset:s;display:grid;gap:0}
+.step{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:28px 0;border-top:1px solid var(--line);align-items:start}
+.step:first-child{border-top:none}
+.step .n{counter-increment:s;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--accent);font-weight:600}
+.step .n::before{content:"0" counter(s)}
+.step h4{font-size:1.35rem;margin-bottom:.4rem}
+.step p{color:var(--ink-soft)}
+
+/* ---------- testimonials ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:30px}
+.quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:#fff;margin-bottom:1.2rem}
+.quote .by{font-size:.9rem;color:#a9c2e4;font-weight:600}
+.quote .mark{font-family:'Fraunces',serif;font-size:3rem;color:var(--accent);line-height:.6}
+
+/* ---------- CTA ---------- */
+.cta{background:linear-gradient(120deg,#021B39,#0a3a72);color:#fff;border-radius:28px;
+  padding:62px 56px;text-align:center;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(224,100,74,.35),transparent 70%)}
+.cta h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.7rem;position:relative}
+.cta p{color:#c3d6f0;max-width:48ch;margin:0 auto 1.8rem;position:relative}
+.cta .hero-actions{justify-content:center;position:relative}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.1rem}
+.field label{font-size:.88rem;font-weight:600;color:var(--ink)}
+.field input,.field textarea,.field select{font-family:inherit;font-size:1rem;padding:.85rem 1rem;
+  border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:.2s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--teal);
+  box-shadow:0 0 0 3px rgba(2,27,57,.12)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.cinfo{display:flex;flex-direction:column;gap:1.6rem}
+.cinfo .item{display:flex;gap:1rem;align-items:flex-start}
+.cinfo .ci{flex:none;width:46px;height:46px;border-radius:12px;background:rgba(2,27,57,.1);
+  display:grid;place-items:center;font-size:1.3rem}
+.cinfo h4{font-size:1.08rem;margin-bottom:.15rem}
+.cinfo p,.cinfo a{color:var(--ink-soft);font-size:.98rem}
+.cinfo a:hover{color:var(--teal)}
+
+/* ---------- values / about ---------- */
+.lede{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;color:var(--ink);max-width:24ch}
+
+/* ---------- footer ---------- */
+footer.ft{background:#021124;color:#93a8c4;padding:64px 0 30px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ft .logo{color:#fff;margin-bottom:1rem}
+.ft p.about{font-size:.95rem;max-width:32ch;color:#8197b6}
+.ft h5{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem;font-family:'Hanken Grotesk',sans-serif;font-weight:700}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.ft ul a{color:#93a8c4;font-size:.95rem;transition:.2s}
+.ft ul a:hover{color:var(--accent)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.86rem;color:#74899f}
+
+/* ---------- reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;
+    gap:1.4rem;padding:2rem 28px;border-bottom:1px solid var(--line);transform:translateY(-130%);
+    transition:transform .35s ease;align-items:flex-start}
+  .nav-links.open{transform:none}
+  .nav-cta .btn{display:none}
+  .burger{display:flex}
+  .hero-grid,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .g3,.g2,.quotes{grid-template-columns:1fr}
+  .statband{grid-template-columns:repeat(2,1fr);gap:32px}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .cta{padding:48px 26px}
+  section.block{padding:60px 0}
+}
+@media(max-width:520px){
+  .row2{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .step{grid-template-columns:1fr;gap:.4rem}
+}
+</style>
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M17 7h4v4"/></svg></span>Skill<b>RC</b></a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="who-we-serve.html">Who We Serve</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-primary">Talk to an Expert</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Talk to an Expert</a>
-        <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo" aria-label="Home"></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Talk to Us <span class="arrow">&rarr;</span></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section class="page-hero">
-    <div class="container reveal">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
-      <span class="eyebrow"><span class="dot"></span> Our Services</span>
-      <h1 style="margin-top:1rem">End-to-end revenue cycle management</h1>
-      <p>From the first patient encounter to the final payment, we manage every step of the revenue cycle with precision, transparency, and the right technology.</p>
+<section class="hero" style="padding-bottom:60px">
+  <div class="wrap" style="position:relative;z-index:2;max-width:760px">
+    <span class="eyebrow reveal">Our Services</span>
+    <h1 class="reveal" style="font-size:clamp(2.4rem,5vw,3.9rem);margin:1rem 0 1.2rem">End-to-end revenue cycle, handled with care.</h1>
+    <p class="lead reveal" style="max-width:54ch;font-size:1.15rem">From the first eligibility check to the final dollar collected, we manage every step of your revenue cycle so your team can focus on patients.</p>
+    <div class="hero-actions reveal" style="margin-top:1.6rem"><a href="contact.html" class="btn btn-primary">Request a Consultation <span class="arrow">&rarr;</span></a></div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="grid g3">
+      <div class="card reveal"><div class="ico">&#128221;</div><h3>Medical Billing</h3><p>Full charge entry, claim creation, and submission with rigorous scrubbing to keep clean-claim rates high.</p></div>
+      <div class="card reveal"><div class="ico">&#129518;</div><h3>Coding &amp; Compliance</h3><p>Certified coders ensure accurate, audit-ready coding that captures legitimate revenue and stays current with regulations.</p></div>
+      <div class="card reveal"><div class="ico">&#128203;</div><h3>A/R &amp; Denial Management</h3><p>Aggressive follow-up on aged claims and systematic denial resolution to recover revenue you'd otherwise lose.</p></div>
+      <div class="card reveal"><div class="ico">&#129309;</div><h3>Credentialing &amp; Enrollment</h3><p>Provider enrollment and payer credentialing managed end to end, so you can start billing without delay.</p></div>
+      <div class="card reveal"><div class="ico">&#9989;</div><h3>Eligibility &amp; Patient Access</h3><p>Front-end verification and prior authorization support that prevent denials before they happen.</p></div>
+      <div class="card reveal"><div class="ico">&#128176;</div><h3>Payment Posting</h3><p>Accurate, timely posting and reconciliation that keeps your books clean and your reporting reliable.</p></div>
+      <div class="card reveal"><div class="ico">&#128202;</div><h3>Analytics &amp; Reporting</h3><p>Real-time dashboards and KPI reporting that turn your revenue data into decisions.</p></div>
+      <div class="card reveal"><div class="ico">&#128241;</div><h3>Patient Billing &amp; Support</h3><p>Clear statements and friendly patient support that improve collections and protect your reputation.</p></div>
+      <div class="card reveal"><div class="ico">&#128737;</div><h3>Underpayment Recovery</h3><p>Contract analysis and audits that catch payer underpayments and put that money back where it belongs.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <div class="cards-3">
-        <div class="card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-          <h3>Medical Billing</h3>
-          <p>Accurate charge entry, claim submission, and payment posting that maximize clean-claim rates and shorten the time from service to reimbursement.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-          <h3>Medical Coding</h3>
-          <p>Certified coders ensure precise ICD-10, CPT, and HCPCS coding that keeps you compliant and reduces costly downstream denials.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4v6c0 5-3.5 8-9 10-5.5-2-9-5-9-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-          <h3>Denial Management</h3>
-          <p>We identify root causes, appeal aggressively, and put preventive workflows in place so denials stop recurring.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M21 7v5h-5"/></svg></div>
-          <h3>A/R Recovery</h3>
-          <p>Systematic follow-up on aged accounts recovers revenue you might otherwise write off and improves days-in-A/R.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM20 8v6M23 11h-6"/></svg></div>
-          <h3>Provider Credentialing</h3>
-          <p>We manage enrollment and credentialing with payers so your providers can bill quickly and stay in good standing.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M9 16V9M14 16v-4M19 16V7"/></svg></div>
-          <h3>Reporting & Analytics</h3>
-          <p>Real-time dashboards and business intelligence give you full visibility into trends, benchmarks, and opportunities.</p>
-        </div>
-      </div>
+<section class="block">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">How we work</span>
+      <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:1rem 0 .6rem">A clear path to better performance</h2>
+      <p style="color:var(--ink-soft);font-size:1.08rem">No black boxes. We start by understanding your numbers, then build a tailored process around them — and keep you informed the whole way.</p>
+      <div class="hero-actions" style="margin-top:1.6rem"><a href="contact.html" class="btn btn-primary">Start With an Assessment <span class="arrow">&rarr;</span></a></div>
     </div>
-  </section>
-
-  <!-- Software-agnostic band -->
-  <section class="section alt">
-    <div class="container split">
-      <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span> Connected Ecosystem</span>
-        <h2>A software-agnostic platform that works with your stack</h2>
-        <p style="color:var(--muted); margin-top:1rem">We support integration with EHRs, practice management systems, charge-capture applications, and more — no rip-and-replace required. Our team meets you where you are and amplifies the value of the tools you already trust.</p>
-        <div class="hero-trust" style="margin-top:1.6rem">
-          <span><span class="check">✓</span> EHR integrations</span>
-          <span><span class="check">✓</span> Practice management</span>
-          <span><span class="check">✓</span> Charge capture</span>
-        </div>
-        <a href="contact.html" class="btn btn-dark" style="margin-top:1.8rem">Talk to an Expert</a>
-      </div>
-      <div class="split-visual reveal">
-        <h3 style="color:#fff">Outcomes our clients see</h3>
-        <div class="hero-stat-row" style="margin-top:1.4rem">
-          <div class="hero-stat"><div class="num">98%</div><div class="lbl">Clean claim rate</div></div>
-          <div class="hero-stat"><div class="num">−27%</div><div class="lbl">Denial rate</div></div>
-          <div class="hero-stat"><div class="num">+34%</div><div class="lbl">Net collections</div></div>
-          <div class="hero-stat"><div class="num">&lt;30</div><div class="lbl">Days in A/R</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section">
-    <div class="container">
-      <div class="head-center reveal">
-        <span class="eyebrow"><span class="dot"></span> How We Engage</span>
-        <h2>A clear path to predictable revenue</h2>
-      </div>
+    <div class="panel reveal">
       <div class="steps">
-        <div class="step reveal"><div class="n">01</div><h4>Assess</h4><p>We review your current RCM workflows and benchmark against industry KPIs.</p></div>
-        <div class="step reveal"><div class="n">02</div><h4>Design</h4><p>We build a tailored plan that connects your systems, people, and processes.</p></div>
-        <div class="step reveal"><div class="n">03</div><h4>Implement</h4><p>Our experts integrate seamlessly with your team and existing technology.</p></div>
-        <div class="step reveal"><div class="n">04</div><h4>Optimize</h4><p>Continuous reporting and refinement keep collections above benchmark.</p></div>
+        <div class="step"><span class="n"></span><div><h4>Assess</h4><p>We review your current workflows, denials, and KPIs to find where revenue is leaking.</p></div></div>
+        <div class="step"><span class="n"></span><div><h4>Design</h4><p>We build a customized RCM process and technology setup mapped to your specialty.</p></div></div>
+        <div class="step"><span class="n"></span><div><h4>Execute</h4><p>Our team runs day-to-day billing, coding, and follow-up as an extension of yours.</p></div></div>
+        <div class="step"><span class="n"></span><div><h4>Optimize</h4><p>Continuous reporting and benchmarking keep performance climbing over time.</p></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <div class="cta-band reveal">
-        <h2>See where we can recover revenue</h2>
-        <p>Request a free assessment and we'll show you the opportunities hiding in your revenue cycle.</p>
-        <a href="contact.html" class="btn btn-primary">Get a Free Assessment
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<section class="block deep">
+  <div class="wrap">
+    <div class="statband">
+      <div class="reveal"><div class="num">100%</div><div class="lbl">Software-agnostic integration</div></div>
+      <div class="reveal"><div class="num">&#8804;48h</div><div class="lbl">Typical claim submission turnaround</div></div>
+      <div class="reveal"><div class="num">40+</div><div class="lbl">Specialties supported</div></div>
+      <div class="reveal"><div class="num">Real-time</div><div class="lbl">KPI &amp; financial reporting</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Not sure where your revenue is leaking?</h2>
+      <p>We'll run a no-obligation assessment of your revenue cycle and show you exactly where the opportunities are.</p>
+      <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Book Your Assessment <span class="arrow">&rarr;</span></a></div>
+    </div>
+  </div>
+</section>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <p class="about">Full-service revenue cycle management and medical billing for healthcare organizations — built to reduce denials, accelerate cash flow, and protect your bottom line.</p>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="who-we-serve.html">Who We Serve</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">Medical Billing</a></li>
+          <li><a href="services.html">Coding &amp; Compliance</a></li>
+          <li><a href="services.html">A/R &amp; Denial Management</a></li>
+          <li><a href="services.html">Credentialing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="mailto:hello@skillrevenuecycle.com">hello@skillrevenuecycle.com</a></li>
+          <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+          <li><a href="contact.html">Request a Consultation</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M17 7h4v4"/></svg></span>Skill<b style="color:var(--brand-l)">RC</b></div>
-          <p>Healthcare revenue cycle management and medical billing services that reduce denials, accelerate cash flow, and optimize revenue.</p>
-        </div>
-        <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="services.html">Services</a><a href="who-we-serve.html">Who We Serve</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h5>Services</h5><a href="services.html">Medical Billing</a><a href="services.html">Medical Coding</a><a href="services.html">Denial Management</a><a href="services.html">A/R Recovery</a></div>
-        <div class="footer-col"><h5>Contact</h5><a href="mailto:contact@skillrevenucycle.com">contact@skillrevenucycle.com</a><a href="contact.html">Request an Assessment</a></div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Skill Revenue Cycle. All rights reserved.</span>
-        <span>HIPAA-compliant · Built for healthcare organizations</span>
-      </div>
+    <div class="ft-bottom">
+      <span>&copy; <span id="yr"></span> Skill Revenue Cycle. All rights reserved.</span>
+      <span>skillrevenuecycle.com</span>
     </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  </div>
+</footer>
+<script>
+  // mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger&&burger.addEventListener('click',()=>{menu.classList.toggle('open');});
+  // sticky header state
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>10);
+  window.addEventListener('scroll',onScroll);onScroll();
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // scroll reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>

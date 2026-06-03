@@ -1,112 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Who We Serve | Skill Revenue Cycle</title>
-  <meta name="description" content="Specialized RCM for behavioral health, community health, health systems, hospitals, hospital-affiliated groups, and physician groups across every specialty." />
-  <link rel="canonical" href="https://skillrevenuecycle.com/who-we-serve.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Serve | Skill Revenue Cycle</title>
+<meta name="description" content="Customized RCM for physician groups, behavioral health, hospitals, community health, health systems, and specialty practices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F0F8FF; --surface:#ffffff; --ink:#021B39; --ink-soft:#46597a;
+  --teal:#021B39; --teal-deep:#021B39; --accent:#e0644a; --accent-deep:#c14a32;
+  --sand:#dbe7f7; --line:rgba(2,27,57,.12);
+  --radius:18px; --shadow:0 22px 48px -28px rgba(10,61,60,.55);
+  --maxw:1180px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent-deep);display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.98rem;
+  padding:.85rem 1.5rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 24px -12px rgba(224,100,74,.7)}
+.btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--teal-deep)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(0,0,0,.4)}
+.arrow{transition:transform .25s ease}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ---------- header ---------- */
+header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+  background:rgba(246,243,236,.82);border-bottom:1px solid transparent;transition:.3s ease}
+header.nav.scrolled{border-bottom-color:var(--line);background:rgba(246,243,236,.95)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-size:1.32rem;
+  font-weight:600;color:var(--teal-deep);letter-spacing:-.02em;min-width:130px;height:36px}
+.logo .mark{width:34px;height:34px;border-radius:9px;background:var(--teal);position:relative;flex:none}
+.logo .mark::before{content:"";position:absolute;inset:8px;border:2.5px solid var(--accent);
+  border-radius:50%;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(-30deg)}
+.logo .mark::after{content:"";position:absolute;right:7px;bottom:7px;width:7px;height:7px;
+  border-radius:50%;background:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-weight:500;font-size:.97rem;color:var(--ink-soft);position:relative;padding:.2rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;
+  background:var(--accent);transition:width .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:1rem}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:88px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(2,27,57,.16),transparent 65%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-120px;bottom:-180px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(224,100,74,.14),transparent 68%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.3rem);margin:1.1rem 0 1.3rem}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:34ch;margin-bottom:2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-card{background:var(--surface);border-radius:22px;padding:34px;box-shadow:var(--shadow);
+  border:1px solid var(--line);position:relative}
+.hero-card .tag{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep)}
+.hero-card h3{font-size:1.5rem;margin:.5rem 0 1.4rem}
+.statline{display:flex;justify-content:space-between;padding:1rem 0;border-top:1px solid var(--line)}
+.statline:first-of-type{border-top:none}
+.statline .num{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--teal);font-weight:600}
+.statline .lbl{font-size:.92rem;color:var(--ink-soft);max-width:14ch;text-align:right}
+.dots{position:absolute;right:-14px;top:-14px;width:80px;height:80px;z-index:-1;
+  background-image:radial-gradient(var(--teal) 1.6px,transparent 1.6px);background-size:13px 13px;opacity:.4}
+
+/* ---------- generic sections ---------- */
+section.block{padding:84px 0}
+section.alt{background:var(--surface)}
+section.deep{background:var(--teal-deep);color:#dbe9fb}
+section.deep h2,section.deep h3{color:#fff}
+section.deep .eyebrow{color:#f0a58f}
+section.deep .eyebrow::before{background:var(--accent)}
+.sec-head{max-width:62ch;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:1rem 0 .8rem}
+.sec-head p{color:var(--ink-soft);font-size:1.08rem}
+section.deep .sec-head p{color:#a9c2e4}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* ---------- card grids ---------- */
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px;transition:.3s ease;position:relative;overflow:hidden}
+section.alt .card{background:var(--bg)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.card .ico{width:52px;height:52px;border-radius:13px;background:rgba(2,27,57,.1);
+  display:grid;place-items:center;margin-bottom:1.1rem;font-size:1.5rem}
+.card h3{font-size:1.32rem;margin-bottom:.6rem}
+.card p{color:var(--ink-soft);font-size:.99rem}
+.card .more{margin-top:1.1rem;font-weight:600;color:var(--teal);display:inline-flex;gap:.4rem;font-size:.95rem}
+.card.link::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.card.link:hover::before{transform:scaleX(1)}
+
+/* ---------- stat band ---------- */
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.statband .num{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4vw,3.4rem);font-weight:600;color:#fff;line-height:1}
+.statband .lbl{color:#a9c2e4;margin-top:.5rem;font-size:.96rem}
+
+/* ---------- split feature ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split-list{list-style:none;display:flex;flex-direction:column;gap:1.4rem;margin-top:1.6rem}
+.split-list li{display:flex;gap:1rem}
+.split-list .b{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-family:'Fraunces',serif}
+.split-list h4{font-size:1.12rem;margin-bottom:.2rem}
+.split-list p{color:var(--ink-soft);font-size:.97rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:var(--shadow)}
+section.deep .panel{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);box-shadow:none}
+
+/* ---------- process steps ---------- */
+.steps{counter-reset:s;display:grid;gap:0}
+.step{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:28px 0;border-top:1px solid var(--line);align-items:start}
+.step:first-child{border-top:none}
+.step .n{counter-increment:s;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--accent);font-weight:600}
+.step .n::before{content:"0" counter(s)}
+.step h4{font-size:1.35rem;margin-bottom:.4rem}
+.step p{color:var(--ink-soft)}
+
+/* ---------- testimonials ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:30px}
+.quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:#fff;margin-bottom:1.2rem}
+.quote .by{font-size:.9rem;color:#a9c2e4;font-weight:600}
+.quote .mark{font-family:'Fraunces',serif;font-size:3rem;color:var(--accent);line-height:.6}
+
+/* ---------- CTA ---------- */
+.cta{background:linear-gradient(120deg,#021B39,#0a3a72);color:#fff;border-radius:28px;
+  padding:62px 56px;text-align:center;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(224,100,74,.35),transparent 70%)}
+.cta h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.7rem;position:relative}
+.cta p{color:#c3d6f0;max-width:48ch;margin:0 auto 1.8rem;position:relative}
+.cta .hero-actions{justify-content:center;position:relative}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.1rem}
+.field label{font-size:.88rem;font-weight:600;color:var(--ink)}
+.field input,.field textarea,.field select{font-family:inherit;font-size:1rem;padding:.85rem 1rem;
+  border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:.2s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--teal);
+  box-shadow:0 0 0 3px rgba(2,27,57,.12)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.cinfo{display:flex;flex-direction:column;gap:1.6rem}
+.cinfo .item{display:flex;gap:1rem;align-items:flex-start}
+.cinfo .ci{flex:none;width:46px;height:46px;border-radius:12px;background:rgba(2,27,57,.1);
+  display:grid;place-items:center;font-size:1.3rem}
+.cinfo h4{font-size:1.08rem;margin-bottom:.15rem}
+.cinfo p,.cinfo a{color:var(--ink-soft);font-size:.98rem}
+.cinfo a:hover{color:var(--teal)}
+
+/* ---------- values / about ---------- */
+.lede{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;color:var(--ink);max-width:24ch}
+
+/* ---------- footer ---------- */
+footer.ft{background:#021124;color:#93a8c4;padding:64px 0 30px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ft .logo{color:#fff;margin-bottom:1rem}
+.ft p.about{font-size:.95rem;max-width:32ch;color:#8197b6}
+.ft h5{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem;font-family:'Hanken Grotesk',sans-serif;font-weight:700}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.ft ul a{color:#93a8c4;font-size:.95rem;transition:.2s}
+.ft ul a:hover{color:var(--accent)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.86rem;color:#74899f}
+
+/* ---------- reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;
+    gap:1.4rem;padding:2rem 28px;border-bottom:1px solid var(--line);transform:translateY(-130%);
+    transition:transform .35s ease;align-items:flex-start}
+  .nav-links.open{transform:none}
+  .nav-cta .btn{display:none}
+  .burger{display:flex}
+  .hero-grid,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .g3,.g2,.quotes{grid-template-columns:1fr}
+  .statband{grid-template-columns:repeat(2,1fr);gap:32px}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .cta{padding:48px 26px}
+  section.block{padding:60px 0}
+}
+@media(max-width:520px){
+  .row2{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .step{grid-template-columns:1fr;gap:.4rem}
+}
+</style>
 </head>
 <body>
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo" aria-label="Home"></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html" class="active">Who We Serve</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Talk to Us <span class="arrow">&rarr;</span></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M17 7h4v4"/></svg></span>Skill<b>RC</b></a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="who-we-serve.html" class="active">Who We Serve</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-primary">Talk to an Expert</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Talk to an Expert</a>
-        <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<section class="hero" style="padding-bottom:60px">
+  <div class="wrap" style="position:relative;z-index:2;max-width:760px">
+    <span class="eyebrow reveal">Who We Serve</span>
+    <h1 class="reveal" style="font-size:clamp(2.4rem,5vw,3.9rem);margin:1rem 0 1.2rem">RCM that adapts to <em style="font-style:italic;color:var(--teal)">your</em> world.</h1>
+    <p class="lead reveal" style="max-width:54ch;font-size:1.15rem">Our solutions are customizable for every organization type and specialty. Deep experience with each means your revenue cycle fits your real-world challenges.</p>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="grid g3">
+      <div class="card reveal"><div class="ico">&#129658;</div><h3>Physician Groups</h3><p>We work with any specialty, weaving in RCM experts, technology, and proven processes to improve financial performance.</p></div>
+      <div class="card reveal"><div class="ico">&#129504;</div><h3>Behavioral Health</h3><p>Streamline revenue workflows with holistic integrations built for the unique billing patterns of behavioral health.</p></div>
+      <div class="card reveal"><div class="ico">&#127962;</div><h3>Community Health</h3><p>Our experience with community health centers lets you focus on your mission while we manage the numbers.</p></div>
+      <div class="card reveal"><div class="ico">&#127959;</div><h3>Health Systems</h3><p>System RCM has many dimensions — we bring a transparent, data-driven approach across every site.</p></div>
+      <div class="card reveal"><div class="ico">&#127973;</div><h3>Hospitals</h3><p>Tailored billing and RCM solutions that support financial independence and compliance.</p></div>
+      <div class="card reveal"><div class="ico">&#127970;</div><h3>Hospital-Affiliated</h3><p>Hospital-affiliated practices carry distinct complexities — we simplify them for financial equity.</p></div>
+      <div class="card reveal"><div class="ico">&#128137;</div><h3>Anesthesia &amp; Pain</h3><p>Specialized expertise in the coding nuances and payer dynamics of anesthesia and pain management.</p></div>
+      <div class="card reveal"><div class="ico">&#129785;</div><h3>Orthopedics &amp; Surgery</h3><p>High-volume surgical billing handled with the accuracy and follow-up your margins demand.</p></div>
+      <div class="card reveal"><div class="ico">&#127977;</div><h3>Ambulatory &amp; ASCs</h3><p>Streamlined facility and professional billing for ambulatory surgery centers and clinics.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap split">
+    <div class="panel reveal">
+      <span class="eyebrow">Don't see your specialty?</span>
+      <h3 style="font-size:1.7rem;margin:.6rem 0 .8rem">We've probably handled it.</h3>
+      <p style="color:var(--ink-soft)">Across 40+ specialties and every major organization type, our team has seen the edge cases. Tell us about your practice and we'll show you a tailored plan.</p>
+      <div class="hero-actions" style="margin-top:1.4rem"><a href="contact.html" class="btn btn-primary">Talk to Our Team <span class="arrow">&rarr;</span></a></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Built for your scale</span>
+      <h2 style="font-size:clamp(2rem,3.6vw,2.6rem);margin:1rem 0 .6rem">From solo practice to system-wide</h2>
+      <ul class="split-list">
+        <li><span class="b">&#10003;</span><div><h4>Independent &amp; small groups</h4><p>Enterprise-grade billing without the overhead of an in-house team.</p></div></li>
+        <li><span class="b">&#10003;</span><div><h4>Mid-size practices</h4><p>Scalable processes that grow with your patient volume and locations.</p></div></li>
+        <li><span class="b">&#10003;</span><div><h4>Health systems</h4><p>Coordinated, transparent RCM across departments, sites, and specialties.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Let's tailor RCM to your specialty</h2>
+      <p>Every organization is different. We'll build an approach that fits your payers, your codes, and your goals.</p>
+      <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Get in Touch <span class="arrow">&rarr;</span></a></div>
+    </div>
+  </div>
+</section>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <p class="about">Full-service revenue cycle management and medical billing for healthcare organizations — built to reduce denials, accelerate cash flow, and protect your bottom line.</p>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="who-we-serve.html">Who We Serve</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">Medical Billing</a></li>
+          <li><a href="services.html">Coding &amp; Compliance</a></li>
+          <li><a href="services.html">A/R &amp; Denial Management</a></li>
+          <li><a href="services.html">Credentialing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="mailto:hello@skillrevenuecycle.com">hello@skillrevenuecycle.com</a></li>
+          <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+          <li><a href="contact.html">Request a Consultation</a></li>
+        </ul>
       </div>
     </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container reveal">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Who We Serve</div>
-      <span class="eyebrow"><span class="dot"></span> Who We Serve</span>
-      <h1 style="margin-top:1rem">RCM solutions for every organization &amp; specialty</h1>
-      <p>Deep experience across the healthcare landscape means your revenue cycle adapts to your specific requirements and challenges — not the other way around.</p>
+    <div class="ft-bottom">
+      <span>&copy; <span id="yr"></span> Skill Revenue Cycle. All rights reserved.</span>
+      <span>skillrevenuecycle.com</span>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="grid-6">
-        <div class="tile reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg></div><h3>Behavioral Health</h3><p>Holistic integrations and workflows designed for the unique billing realities of behavioral and mental health services.</p></div>
-        <div class="tile reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5"/></svg></div><h3>Community Health</h3><p>We manage the numbers behind community health centers so you can stay focused on your mission and the people you serve.</p></div>
-        <div class="tile reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l5-3 5 3v13M13 21V11l5-3 3 2v11M3 21h18"/></svg></div><h3>Health System</h3><p>A transparent, data-driven approach to the many moving parts of multi-facility health-system revenue cycles.</p></div>
-        <div class="tile reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M9 21v-4h6v4M12 7v4M10 9h4"/></svg></div><h3>Hospital</h3><p>Tailored billing and RCM solutions that drive financial independence, compliance, and stronger margins.</p></div>
-        <div class="tile reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6-4v4l6-4v4l6-4v12M3 21h18"/></svg></div><h3>Hospital-Affiliated</h3><p>We simplify the distinct complexities of hospital-affiliated groups to ensure financial equity across the board.</p></div>
-        <div class="tile reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 21v-2a5 5 0 0 1 10 0v2M14 21v-1a4 4 0 0 1 7-3"/></svg></div><h3>Physician Group</h3><p>RCM experts, technology, and proven processes that lift financial performance across any specialty you practice.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="container split">
-      <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span> Specialty Depth</span>
-        <h2>Experience that understands your nuances</h2>
-        <p style="color:var(--muted); margin-top:1rem">Strategic collaboration with leaders across revenue cycle management means we understand your competitive landscape and the nuances of your specialty. Those insights are what elevate your revenue potential.</p>
-        <div class="split-list">
-          <div class="split-item"><div class="num">+</div><div><h4>Anesthesia &amp; Pain</h4><p>Complex time-based billing handled with precision.</p></div></div>
-          <div class="split-item"><div class="num">+</div><div><h4>Orthopedics &amp; Surgery</h4><p>High-volume, high-value claims optimized end to end.</p></div></div>
-          <div class="split-item"><div class="num">+</div><div><h4>Primary &amp; Urgent Care</h4><p>Reliable data and dependable, friendly service.</p></div></div>
-        </div>
-      </div>
-      <div class="split-visual reveal">
-        <h3 style="color:#fff">Trusted across the nation</h3>
-        <div class="hero-stat-row" style="margin-top:1.4rem">
-          <div class="hero-stat"><div class="num">15+</div><div class="lbl">Specialties</div></div>
-          <div class="hero-stat"><div class="num">20+</div><div class="lbl">Years</div></div>
-          <div class="hero-stat"><div class="num">98%</div><div class="lbl">Clean claims</div></div>
-          <div class="hero-stat"><div class="num">100%</div><div class="lbl">HIPAA-compliant</div></div>
-        </div>
-        <p style="color:#cfe6e3; margin-top:1.2rem">Whatever your specialty, we weave in the right experts, technology, and processes to improve your financial performance.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="cta-band reveal">
-        <h2>Not sure where to start?</h2>
-        <p>Tell us about your organization and we'll show you exactly how we'd approach your revenue cycle.</p>
-        <a href="contact.html" class="btn btn-primary">Talk to an Expert
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M17 7h4v4"/></svg></span>Skill<b style="color:var(--brand-l)">RC</b></div>
-          <p>Healthcare revenue cycle management and medical billing services that reduce denials, accelerate cash flow, and optimize revenue.</p>
-        </div>
-        <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="services.html">Services</a><a href="who-we-serve.html">Who We Serve</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h5>Services</h5><a href="services.html">Medical Billing</a><a href="services.html">Medical Coding</a><a href="services.html">Denial Management</a><a href="services.html">A/R Recovery</a></div>
-        <div class="footer-col"><h5>Contact</h5><a href="mailto:contact@skillrevenucycle.com">contact@skillrevenucycle.com</a><a href="contact.html">Request an Assessment</a></div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Skill Revenue Cycle. All rights reserved.</span>
-        <span>HIPAA-compliant · Built for healthcare organizations</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  </div>
+</footer>
+<script>
+  // mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger&&burger.addEventListener('click',()=>{menu.classList.toggle('open');});
+  // sticky header state
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>10);
+  window.addEventListener('scroll',onScroll);onScroll();
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // scroll reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
