@@ -3,338 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Skill Revenue Cycle</title>
-<meta name="description" content="Get in touch with Skill Revenue Cycle for a free revenue cycle assessment. We respond within one business day.">
+<title>Contact | S.K.I.L.L. Revenue Cycle Management</title>
+<meta name="description" content="Got questions or need assistance? Contact S.K.I.L.L. Revenue Cycle Management today and our team will get back to you with the support you need.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#F0F8FF; --surface:#ffffff; --ink:#021B39; --ink-soft:#46597a;
-  --teal:#021B39; --teal-deep:#021B39; --accent:#e0644a; --accent-deep:#c14a32;
-  --sand:#dbe7f7; --line:rgba(2,27,57,.12);
-  --radius:18px; --shadow:0 22px 48px -28px rgba(10,61,60,.55);
-  --maxw:1180px;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);
-  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--accent-deep);display:inline-flex;align-items:center;gap:.6rem}
-.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
-
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.98rem;
-  padding:.85rem 1.5rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:none}
-.btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 24px -12px rgba(224,100,74,.7)}
-.btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
-.btn-light{background:#fff;color:var(--teal-deep)}
-.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(0,0,0,.4)}
-.arrow{transition:transform .25s ease}
-.btn:hover .arrow{transform:translateX(4px)}
-
-/* ---------- header ---------- */
-header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-  background:rgba(246,243,236,.82);border-bottom:1px solid transparent;transition:.3s ease}
-header.nav.scrolled{border-bottom-color:var(--line);background:rgba(246,243,236,.95)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
-.logo{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-size:1.32rem;
-  font-weight:600;color:var(--teal-deep);letter-spacing:-.02em;min-width:130px;height:36px}
-.logo .mark{width:34px;height:34px;border-radius:9px;background:var(--teal);position:relative;flex:none}
-.logo .mark::before{content:"";position:absolute;inset:8px;border:2.5px solid var(--accent);
-  border-radius:50%;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(-30deg)}
-.logo .mark::after{content:"";position:absolute;right:7px;bottom:7px;width:7px;height:7px;
-  border-radius:50%;background:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-weight:500;font-size:.97rem;color:var(--ink-soft);position:relative;padding:.2rem 0}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;
-  background:var(--accent);transition:width .25s ease}
-.nav-links a:hover,.nav-links a.active{color:var(--ink)}
-.nav-links a.active::after,.nav-links a:hover::after{width:100%}
-.nav-cta{display:flex;align-items:center;gap:1rem}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
-
-/* ---------- hero ---------- */
-.hero{position:relative;padding:88px 0 96px;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;border-radius:50%;
-  background:radial-gradient(circle at 30% 30%,rgba(2,27,57,.16),transparent 65%);pointer-events:none}
-.hero::after{content:"";position:absolute;left:-120px;bottom:-180px;width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(224,100,74,.14),transparent 68%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:2}
-.hero h1{font-size:clamp(2.5rem,5.2vw,4.3rem);margin:1.1rem 0 1.3rem}
-.hero h1 em{font-style:italic;color:var(--teal)}
-.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:34ch;margin-bottom:2rem}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.hero-card{background:var(--surface);border-radius:22px;padding:34px;box-shadow:var(--shadow);
-  border:1px solid var(--line);position:relative}
-.hero-card .tag{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep)}
-.hero-card h3{font-size:1.5rem;margin:.5rem 0 1.4rem}
-.statline{display:flex;justify-content:space-between;padding:1rem 0;border-top:1px solid var(--line)}
-.statline:first-of-type{border-top:none}
-.statline .num{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--teal);font-weight:600}
-.statline .lbl{font-size:.92rem;color:var(--ink-soft);max-width:14ch;text-align:right}
-.dots{position:absolute;right:-14px;top:-14px;width:80px;height:80px;z-index:-1;
-  background-image:radial-gradient(var(--teal) 1.6px,transparent 1.6px);background-size:13px 13px;opacity:.4}
-
-/* ---------- generic sections ---------- */
-section.block{padding:84px 0}
-section.alt{background:var(--surface)}
-section.deep{background:var(--teal-deep);color:#dbe9fb}
-section.deep h2,section.deep h3{color:#fff}
-section.deep .eyebrow{color:#f0a58f}
-section.deep .eyebrow::before{background:var(--accent)}
-.sec-head{max-width:62ch;margin-bottom:48px}
-.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:1rem 0 .8rem}
-.sec-head p{color:var(--ink-soft);font-size:1.08rem}
-section.deep .sec-head p{color:#a9c2e4}
-.center{text-align:center;margin-left:auto;margin-right:auto}
-
-/* ---------- card grids ---------- */
-.grid{display:grid;gap:24px}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-  padding:34px;transition:.3s ease;position:relative;overflow:hidden}
-section.alt .card{background:var(--bg)}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
-.card .ico{width:52px;height:52px;border-radius:13px;background:rgba(2,27,57,.1);
-  display:grid;place-items:center;margin-bottom:1.1rem;font-size:1.5rem}
-.card h3{font-size:1.32rem;margin-bottom:.6rem}
-.card p{color:var(--ink-soft);font-size:.99rem}
-.card .more{margin-top:1.1rem;font-weight:600;color:var(--teal);display:inline-flex;gap:.4rem;font-size:.95rem}
-.card.link::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
-  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
-.card.link:hover::before{transform:scaleX(1)}
-
-/* ---------- stat band ---------- */
-.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.statband .num{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4vw,3.4rem);font-weight:600;color:#fff;line-height:1}
-.statband .lbl{color:#a9c2e4;margin-top:.5rem;font-size:.96rem}
-
-/* ---------- split feature ---------- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.split-list{list-style:none;display:flex;flex-direction:column;gap:1.4rem;margin-top:1.6rem}
-.split-list li{display:flex;gap:1rem}
-.split-list .b{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;
-  display:grid;place-items:center;font-weight:700;font-family:'Fraunces',serif}
-.split-list h4{font-size:1.12rem;margin-bottom:.2rem}
-.split-list p{color:var(--ink-soft);font-size:.97rem}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:var(--shadow)}
-section.deep .panel{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);box-shadow:none}
-
-/* ---------- process steps ---------- */
-.steps{counter-reset:s;display:grid;gap:0}
-.step{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:28px 0;border-top:1px solid var(--line);align-items:start}
-.step:first-child{border-top:none}
-.step .n{counter-increment:s;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--accent);font-weight:600}
-.step .n::before{content:"0" counter(s)}
-.step h4{font-size:1.35rem;margin-bottom:.4rem}
-.step p{color:var(--ink-soft)}
-
-/* ---------- testimonials ---------- */
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:30px}
-.quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:#fff;margin-bottom:1.2rem}
-.quote .by{font-size:.9rem;color:#a9c2e4;font-weight:600}
-.quote .mark{font-family:'Fraunces',serif;font-size:3rem;color:var(--accent);line-height:.6}
-
-/* ---------- CTA ---------- */
-.cta{background:linear-gradient(120deg,#021B39,#0a3a72);color:#fff;border-radius:28px;
-  padding:62px 56px;text-align:center;position:relative;overflow:hidden}
-.cta::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
-  background:radial-gradient(circle,rgba(224,100,74,.35),transparent 70%)}
-.cta h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.7rem;position:relative}
-.cta p{color:#c3d6f0;max-width:48ch;margin:0 auto 1.8rem;position:relative}
-.cta .hero-actions{justify-content:center;position:relative}
-
-/* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
-.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.1rem}
-.field label{font-size:.88rem;font-weight:600;color:var(--ink)}
-.field input,.field textarea,.field select{font-family:inherit;font-size:1rem;padding:.85rem 1rem;
-  border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:.2s}
-.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--teal);
-  box-shadow:0 0 0 3px rgba(2,27,57,.12)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-.cinfo{display:flex;flex-direction:column;gap:1.6rem}
-.cinfo .item{display:flex;gap:1rem;align-items:flex-start}
-.cinfo .ci{flex:none;width:46px;height:46px;border-radius:12px;background:rgba(2,27,57,.1);
-  display:grid;place-items:center;font-size:1.3rem}
-.cinfo h4{font-size:1.08rem;margin-bottom:.15rem}
-.cinfo p,.cinfo a{color:var(--ink-soft);font-size:.98rem}
-.cinfo a:hover{color:var(--teal)}
-
-/* ---------- values / about ---------- */
-.lede{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;color:var(--ink);max-width:24ch}
-
-/* ---------- footer ---------- */
-footer.ft{background:#021124;color:#93a8c4;padding:64px 0 30px}
-.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
-.ft .logo{color:#fff;margin-bottom:1rem}
-.ft p.about{font-size:.95rem;max-width:32ch;color:#8197b6}
-.ft h5{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem;font-family:'Hanken Grotesk',sans-serif;font-weight:700}
-.ft ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
-.ft ul a{color:#93a8c4;font-size:.95rem;transition:.2s}
-.ft ul a:hover{color:var(--accent)}
-.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;
-  justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.86rem;color:#74899f}
-
-/* ---------- reveal animation ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-
-/* ---------- responsive ---------- */
-@media(max-width:900px){
-  .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;
-    gap:1.4rem;padding:2rem 28px;border-bottom:1px solid var(--line);transform:translateY(-130%);
-    transition:transform .35s ease;align-items:flex-start}
-  .nav-links.open{transform:none}
-  .nav-cta .btn{display:none}
-  .burger{display:flex}
-  .hero-grid,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
-  .g3,.g2,.quotes{grid-template-columns:1fr}
-  .statband{grid-template-columns:repeat(2,1fr);gap:32px}
-  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
-  .cta{padding:48px 26px}
-  section.block{padding:60px 0}
-}
-@media(max-width:520px){
-  .row2{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr}
-  .step{grid-template-columns:1fr;gap:.4rem}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="logo" aria-label="Home"></a>
-    <ul class="nav-links" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="who-we-serve.html">Who We Serve</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <span class="stack">S.K.I.L.L.<small>Revenue Cycle Management</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary">Talk to Us <span class="arrow">&rarr;</span></a>
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="contact.html" class="btn btn-primary">Schedule Demo</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<section class="hero" style="padding-bottom:50px">
-  <div class="wrap" style="position:relative;z-index:2;max-width:720px">
-    <span class="eyebrow reveal">Contact</span>
-    <h1 class="reveal" style="font-size:clamp(2.4rem,5vw,3.7rem);margin:1rem 0 1.1rem">Let's talk about your revenue cycle.</h1>
-    <p class="lead reveal" style="max-width:52ch;font-size:1.15rem">Tell us a little about your organization and we'll get back to you within one business day to schedule a free assessment.</p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a> / Contact</div>
+    <h1>Got questions or need assistance?</h1>
+    <p>Our team is ready to help. Contact us today and we'll get back to you as soon as possible with the support you need.</p>
   </div>
 </section>
 
-<section class="block alt" style="padding-top:40px">
+<!-- PROCESS -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">This Is How We Do It</span>
+      <h2>Three simple steps to smarter revenue</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>Request a Proposal</h3>
+        <p>Get a personalized plan from our expert team, tailored to your organization's needs.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Share Your Details</h3>
+        <p>Fill out a quick questionnaire so we can understand your revenue cycle and operations better.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Sit Back &amp; Relax</h3>
+        <p>We handle the billing, coding and revenue cycle management — while you focus on patient care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="section" style="background:#fff;border-block:1px solid var(--line);">
   <div class="wrap contact-grid">
-    <div class="cinfo reveal">
-      <div class="item"><div class="ci">&#9993;</div><div><h4>Email</h4><a href="mailto:contact@skillrevenuecycle.com">contact@skillrevenuecycle.com</a></div></div>
+    <div class="reveal">
+      <span class="eyebrow">Let's Connect</span>
+      <h2>Your smarter revenue journey starts here</h2>
+      <p class="lead" style="margin-bottom:30px;">We'd love to hear from you. Reach out with any questions or to discuss how we can support your organization.</p>
+      <div class="contact-info">
+        <div class="ci-item">
+          <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <div>
+            <h4>Email Us</h4>
+            <a href="mailto:contact@skillrevenuecycle.com">contact@skillrevenuecycle.com</a>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></div>
+          <div>
+            <h4>Response Time</h4>
+            <p>We typically reply within one business day.</p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div>
+            <h4>Hours</h4>
+            <p>Monday – Friday, 9:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+        <div>
+          <h4 style="margin-bottom:10px;">Follow Us</h4>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 005 0 2.5 2.5 0 00-2.52-2.5zM3 8.98h4V21H3zM9 8.98h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg></a>
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.7L5.3 22H2l7.7-8.8L1.6 2h6.8l4.7 6.2zM17.7 20h1.8L7.4 4H5.5z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.8C19.3 5 12 5 12 5s-7.3 0-8.9.5A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.8C4.7 19 12 19 12 19s7.3 0 8.9-.5a2.5 2.5 0 001.7-1.8C23 15.2 23 12 23 12zm-13 3V9l5.2 3z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.8 3.8 0 01-1.4-.9 3.8 3.8 0 01-.9-1.4c-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1 0-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1 0 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1.1-.2-1.7-.4-2.1a3.5 3.5 0 00-.8-1.3 3.5 3.5 0 00-1.3-.8c-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8a3.1 3.1 0 100-6.2 3.1 3.1 0 000 6.2zm6.3-8.2a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="panel reveal">
-      <!-- To make this form send email: create a free endpoint at https://formspree.io
-           and replace YOUR_FORM_ID below with your form ID. Until then it won't submit. -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="row2">
-          <div class="field"><label for="fn">First name</label><input id="fn" name="first_name" type="text" required></div>
-          <div class="field"><label for="ln">Last name</label><input id="ln" name="last_name" type="text" required></div>
+    <div class="form-card reveal">
+      <h3 style="font-size:1.4rem;margin-bottom:6px;">Let's start a conversation that matters</h3>
+      <p style="color:var(--muted);margin-bottom:24px;">Fill out the form and our team will be in touch.</p>
+      <form data-form>
+        <div class="field-row">
+          <div class="field"><label>Full Name *</label><input type="text" required placeholder="Your name"></div>
+          <div class="field"><label>Email *</label><input type="email" required placeholder="you@organization.com"></div>
         </div>
-        <div class="row2">
-          <div class="field"><label for="em">Email</label><input id="em" name="email" type="email" required></div>
-          <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel"></div>
+        <div class="field-row">
+          <div class="field"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"></div>
+          <div class="field"><label>Company Name</label><input type="text" placeholder="Your organization"></div>
         </div>
-        <div class="field"><label for="org">Organization</label><input id="org" name="organization" type="text"></div>
-        <div class="field"><label for="sp">Specialty / organization type</label>
-          <select id="sp" name="specialty">
-            <option value="">Select one…</option>
-            <option>Physician Group</option><option>Behavioral Health</option>
-            <option>Community Health</option><option>Health System</option>
-            <option>Hospital</option><option>Anesthesia / Pain</option>
-            <option>Orthopedics / Surgery</option><option>Ambulatory / ASC</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="field"><label for="msg">How can we help?</label><textarea id="msg" name="message" rows="4" required></textarea></div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message <span class="arrow">&rarr;</span></button>
+        <div class="field"><label>Any questions or comments?</label><textarea required placeholder="How can we help?"></textarea></div>
+        <button type="submit" class="btn btn-primary" data-label="Submit" style="width:100%;justify-content:center;">Submit</button>
+        <p class="form-result form-note" style="display:none;color:var(--accent);font-weight:600;">Thank you — your message has been received. We'll be in touch soon.</p>
       </form>
     </div>
   </div>
 </section>
 
-<section class="block">
+<footer class="site-footer">
   <div class="wrap">
-    <div class="cta reveal">
-      <h2>Prefer to talk it through?</h2>
-      <p>mail us directly and we'll walk you through how a free revenue cycle assessment works.</p>
-      <div class="hero-actions"><a href="email:contact@skillrevenuecycle.com" class="btn btn-primary">Call Us <span class="arrow">&rarr;</span></a></div>
-    </div>
-  </div>
-</section>
-<footer class="ft">
-  <div class="wrap">
-    <div class="ft-grid">
+    <div class="footer-grid">
       <div>
-        <p class="about">Full-service revenue cycle management and medical billing for healthcare organizations — built to reduce denials, accelerate cash flow, and protect your bottom line.</p>
+        <div class="f-brand">S.K.I.L.L. RCM</div>
+        <p>We deliver end-to-end revenue cycle management designed to maximize reimbursements and drive sustainable performance — from patient access and coding to collections, denial management and analytics.</p>
       </div>
       <div>
-        <h5>Company</h5>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="who-we-serve.html">Who We Serve</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <h4>Company</h4>
+        <div class="f-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div>
-        <h5>Services</h5>
-        <ul>
-          <li><a href="services.html">Medical Billing</a></li>
-          <li><a href="services.html">Coding &amp; Compliance</a></li>
-          <li><a href="services.html">A/R &amp; Denial Management</a></li>
-          <li><a href="services.html">Credentialing</a></li>
-        </ul>
+        <h4>Services</h4>
+        <div class="f-links">
+          <a href="services.html">Medical Billing &amp; Coding</a>
+          <a href="services.html">Denial Management</a>
+          <a href="services.html">AR Follow-Up</a>
+          <a href="services.html">RCM Analytics</a>
+        </div>
       </div>
       <div>
-        <h5>Get in Touch</h5>
-        <ul>
-          <li><a href="mailto:contact@skillrevenuecycle.com">contact@skillrevenuecycle.com</a></li>
-          <li><a href="contact.html">Request a Consultation</a></li>
-        </ul>
+        <h4>Get in Touch</h4>
+        <p style="margin-bottom:10px;">We'd love to hear from you. Reach out with any questions or to discuss how we can support your organization.</p>
+        <a class="f-mail" href="mailto:contact@skillrevenuecycle.com">contact@skillrevenuecycle.com</a>
       </div>
     </div>
-    <div class="ft-bottom">
-      <span>&copy; <span id="yr"></span> Skill Revenue Cycle. All rights reserved.</span>
-      <span>skillrevenuecycle.com</span>
+    <div class="footer-bottom">
+      <span>Copyright © <span data-year>2025</span> | S.K.I.L.L. Revenue Cycle Management LLC</span>
+      <span>End-to-End Revenue Cycle Management</span>
     </div>
   </div>
 </footer>
-<script>
-  // mobile menu
-  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
-  burger&&burger.addEventListener('click',()=>{menu.classList.toggle('open');});
-  // sticky header state
-  const nav=document.getElementById('nav');
-  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>10);
-  window.addEventListener('scroll',onScroll);onScroll();
-  // year
-  document.getElementById('yr').textContent=new Date().getFullYear();
-  // scroll reveal
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+
+<script src="script.js"></script>
 </body>
 </html>

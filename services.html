@@ -3,349 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Skill Revenue Cycle</title>
-<meta name="description" content="End-to-end revenue cycle management services: medical billing, coding, A/R and denial management, credentialing, eligibility, analytics, and more.">
+<title>Services | S.K.I.L.L. Revenue Cycle Management</title>
+<meta name="description" content="End-to-end revenue cycle management services: medical billing & coding, denial management, AR follow-up, charge entry, patient access, collections, credentialing, compliance auditing and RCM analytics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#F0F8FF; --surface:#ffffff; --ink:#021B39; --ink-soft:#46597a;
-  --teal:#021B39; --teal-deep:#021B39; --accent:#e0644a; --accent-deep:#c14a32;
-  --sand:#dbe7f7; --line:rgba(2,27,57,.12);
-  --radius:18px; --shadow:0 22px 48px -28px rgba(10,61,60,.55);
-  --maxw:1180px;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);
-  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--accent-deep);display:inline-flex;align-items:center;gap:.6rem}
-.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
-
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.98rem;
-  padding:.85rem 1.5rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:none}
-.btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 24px -12px rgba(224,100,74,.7)}
-.btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
-.btn-light{background:#fff;color:var(--teal-deep)}
-.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(0,0,0,.4)}
-.arrow{transition:transform .25s ease}
-.btn:hover .arrow{transform:translateX(4px)}
-
-/* ---------- header ---------- */
-header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-  background:rgba(246,243,236,.82);border-bottom:1px solid transparent;transition:.3s ease}
-header.nav.scrolled{border-bottom-color:var(--line);background:rgba(246,243,236,.95)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
-.logo{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-size:1.32rem;
-  font-weight:600;color:var(--teal-deep);letter-spacing:-.02em;min-width:130px;height:36px}
-.logo .mark{width:34px;height:34px;border-radius:9px;background:var(--teal);position:relative;flex:none}
-.logo .mark::before{content:"";position:absolute;inset:8px;border:2.5px solid var(--accent);
-  border-radius:50%;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(-30deg)}
-.logo .mark::after{content:"";position:absolute;right:7px;bottom:7px;width:7px;height:7px;
-  border-radius:50%;background:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-weight:500;font-size:.97rem;color:var(--ink-soft);position:relative;padding:.2rem 0}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;
-  background:var(--accent);transition:width .25s ease}
-.nav-links a:hover,.nav-links a.active{color:var(--ink)}
-.nav-links a.active::after,.nav-links a:hover::after{width:100%}
-.nav-cta{display:flex;align-items:center;gap:1rem}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
-
-/* ---------- hero ---------- */
-.hero{position:relative;padding:88px 0 96px;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;border-radius:50%;
-  background:radial-gradient(circle at 30% 30%,rgba(2,27,57,.16),transparent 65%);pointer-events:none}
-.hero::after{content:"";position:absolute;left:-120px;bottom:-180px;width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(224,100,74,.14),transparent 68%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:2}
-.hero h1{font-size:clamp(2.5rem,5.2vw,4.3rem);margin:1.1rem 0 1.3rem}
-.hero h1 em{font-style:italic;color:var(--teal)}
-.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:34ch;margin-bottom:2rem}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.hero-card{background:var(--surface);border-radius:22px;padding:34px;box-shadow:var(--shadow);
-  border:1px solid var(--line);position:relative}
-.hero-card .tag{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep)}
-.hero-card h3{font-size:1.5rem;margin:.5rem 0 1.4rem}
-.statline{display:flex;justify-content:space-between;padding:1rem 0;border-top:1px solid var(--line)}
-.statline:first-of-type{border-top:none}
-.statline .num{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--teal);font-weight:600}
-.statline .lbl{font-size:.92rem;color:var(--ink-soft);max-width:14ch;text-align:right}
-.dots{position:absolute;right:-14px;top:-14px;width:80px;height:80px;z-index:-1;
-  background-image:radial-gradient(var(--teal) 1.6px,transparent 1.6px);background-size:13px 13px;opacity:.4}
-
-/* ---------- generic sections ---------- */
-section.block{padding:84px 0}
-section.alt{background:var(--surface)}
-section.deep{background:var(--teal-deep);color:#dbe9fb}
-section.deep h2,section.deep h3{color:#fff}
-section.deep .eyebrow{color:#f0a58f}
-section.deep .eyebrow::before{background:var(--accent)}
-.sec-head{max-width:62ch;margin-bottom:48px}
-.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:1rem 0 .8rem}
-.sec-head p{color:var(--ink-soft);font-size:1.08rem}
-section.deep .sec-head p{color:#a9c2e4}
-.center{text-align:center;margin-left:auto;margin-right:auto}
-
-/* ---------- card grids ---------- */
-.grid{display:grid;gap:24px}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-  padding:34px;transition:.3s ease;position:relative;overflow:hidden}
-section.alt .card{background:var(--bg)}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
-.card .ico{width:52px;height:52px;border-radius:13px;background:rgba(2,27,57,.1);
-  display:grid;place-items:center;margin-bottom:1.1rem;font-size:1.5rem}
-.card h3{font-size:1.32rem;margin-bottom:.6rem}
-.card p{color:var(--ink-soft);font-size:.99rem}
-.card .more{margin-top:1.1rem;font-weight:600;color:var(--teal);display:inline-flex;gap:.4rem;font-size:.95rem}
-.card.link::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
-  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
-.card.link:hover::before{transform:scaleX(1)}
-
-/* ---------- stat band ---------- */
-.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.statband .num{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4vw,3.4rem);font-weight:600;color:#fff;line-height:1}
-.statband .lbl{color:#a9c2e4;margin-top:.5rem;font-size:.96rem}
-
-/* ---------- split feature ---------- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.split-list{list-style:none;display:flex;flex-direction:column;gap:1.4rem;margin-top:1.6rem}
-.split-list li{display:flex;gap:1rem}
-.split-list .b{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;
-  display:grid;place-items:center;font-weight:700;font-family:'Fraunces',serif}
-.split-list h4{font-size:1.12rem;margin-bottom:.2rem}
-.split-list p{color:var(--ink-soft);font-size:.97rem}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:var(--shadow)}
-section.deep .panel{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);box-shadow:none}
-
-/* ---------- process steps ---------- */
-.steps{counter-reset:s;display:grid;gap:0}
-.step{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:28px 0;border-top:1px solid var(--line);align-items:start}
-.step:first-child{border-top:none}
-.step .n{counter-increment:s;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--accent);font-weight:600}
-.step .n::before{content:"0" counter(s)}
-.step h4{font-size:1.35rem;margin-bottom:.4rem}
-.step p{color:var(--ink-soft)}
-
-/* ---------- testimonials ---------- */
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:30px}
-.quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:#fff;margin-bottom:1.2rem}
-.quote .by{font-size:.9rem;color:#a9c2e4;font-weight:600}
-.quote .mark{font-family:'Fraunces',serif;font-size:3rem;color:var(--accent);line-height:.6}
-
-/* ---------- CTA ---------- */
-.cta{background:linear-gradient(120deg,#021B39,#0a3a72);color:#fff;border-radius:28px;
-  padding:62px 56px;text-align:center;position:relative;overflow:hidden}
-.cta::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
-  background:radial-gradient(circle,rgba(224,100,74,.35),transparent 70%)}
-.cta h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.7rem;position:relative}
-.cta p{color:#c3d6f0;max-width:48ch;margin:0 auto 1.8rem;position:relative}
-.cta .hero-actions{justify-content:center;position:relative}
-
-/* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
-.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.1rem}
-.field label{font-size:.88rem;font-weight:600;color:var(--ink)}
-.field input,.field textarea,.field select{font-family:inherit;font-size:1rem;padding:.85rem 1rem;
-  border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:.2s}
-.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--teal);
-  box-shadow:0 0 0 3px rgba(2,27,57,.12)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-.cinfo{display:flex;flex-direction:column;gap:1.6rem}
-.cinfo .item{display:flex;gap:1rem;align-items:flex-start}
-.cinfo .ci{flex:none;width:46px;height:46px;border-radius:12px;background:rgba(2,27,57,.1);
-  display:grid;place-items:center;font-size:1.3rem}
-.cinfo h4{font-size:1.08rem;margin-bottom:.15rem}
-.cinfo p,.cinfo a{color:var(--ink-soft);font-size:.98rem}
-.cinfo a:hover{color:var(--teal)}
-
-/* ---------- values / about ---------- */
-.lede{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;color:var(--ink);max-width:24ch}
-
-/* ---------- footer ---------- */
-footer.ft{background:#021124;color:#93a8c4;padding:64px 0 30px}
-.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
-.ft .logo{color:#fff;margin-bottom:1rem}
-.ft p.about{font-size:.95rem;max-width:32ch;color:#8197b6}
-.ft h5{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem;font-family:'Hanken Grotesk',sans-serif;font-weight:700}
-.ft ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
-.ft ul a{color:#93a8c4;font-size:.95rem;transition:.2s}
-.ft ul a:hover{color:var(--accent)}
-.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;
-  justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.86rem;color:#74899f}
-
-/* ---------- reveal animation ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-
-/* ---------- responsive ---------- */
-@media(max-width:900px){
-  .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;
-    gap:1.4rem;padding:2rem 28px;border-bottom:1px solid var(--line);transform:translateY(-130%);
-    transition:transform .35s ease;align-items:flex-start}
-  .nav-links.open{transform:none}
-  .nav-cta .btn{display:none}
-  .burger{display:flex}
-  .hero-grid,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
-  .g3,.g2,.quotes{grid-template-columns:1fr}
-  .statband{grid-template-columns:repeat(2,1fr);gap:32px}
-  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
-  .cta{padding:48px 26px}
-  section.block{padding:60px 0}
-}
-@media(max-width:520px){
-  .row2{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr}
-  .step{grid-template-columns:1fr;gap:.4rem}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="logo" aria-label="Home"></a>
-    <ul class="nav-links" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="who-we-serve.html">Who We Serve</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <span class="stack">S.K.I.L.L.<small>Revenue Cycle Management</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary">Talk to Us <span class="arrow">&rarr;</span></a>
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="contact.html" class="btn btn-primary">Schedule Demo</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<section class="hero" style="padding-bottom:60px">
-  <div class="wrap" style="position:relative;z-index:2;max-width:760px">
-    <span class="eyebrow reveal">Our Services</span>
-    <h1 class="reveal" style="font-size:clamp(2.4rem,5vw,3.9rem);margin:1rem 0 1.2rem">End-to-end revenue cycle, handled with care.</h1>
-    <p class="lead reveal" style="max-width:54ch;font-size:1.15rem">From the first eligibility check to the final dollar collected, we manage every step of your revenue cycle so your team can focus on patients.</p>
-    <div class="hero-actions reveal" style="margin-top:1.6rem"><a href="contact.html" class="btn btn-primary">Request a Consultation <span class="arrow">&rarr;</span></a></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a> / Services</div>
+    <h1>End-to-end revenue cycle management services</h1>
+    <p>Discover a unique, data-driven approach to RCM. Transform your finances with services that combine expertise, innovation and partnership — from patient access to final payment.</p>
   </div>
 </section>
 
-<section class="block alt">
+<!-- INTRO -->
+<section class="section tight">
+  <div class="wrap sec-head center reveal">
+    <span class="eyebrow">A Multi-Faceted Approach</span>
+    <h2>One partner for every step of the revenue cycle</h2>
+    <p class="lead">The path to a streamlined revenue cycle starts with a complete evaluation — we analyze processes, performance, unpaid claims, collection efforts and financial data to understand where you stand and where the opportunities are. Then we partner with you across patient access, coding, billing, collections, denial management and analytics.</p>
+  </div>
+</section>
+
+<!-- CORE SERVICES GRID -->
+<section class="section" style="padding-top:0;">
   <div class="wrap">
-    <div class="grid g3">
-      <div class="card reveal"><div class="ico">&#128221;</div><h3>Medical Billing</h3><p>Full charge entry, claim creation, and submission with rigorous scrubbing to keep clean-claim rates high.</p></div>
-      <div class="card reveal"><div class="ico">&#129518;</div><h3>Coding &amp; Compliance</h3><p>Certified coders ensure accurate, audit-ready coding that captures legitimate revenue and stays current with regulations.</p></div>
-      <div class="card reveal"><div class="ico">&#128203;</div><h3>A/R &amp; Denial Management</h3><p>Aggressive follow-up on aged claims and systematic denial resolution to recover revenue you'd otherwise lose.</p></div>
-      <div class="card reveal"><div class="ico">&#129309;</div><h3>Credentialing &amp; Enrollment</h3><p>Provider enrollment and payer credentialing managed end to end, so you can start billing without delay.</p></div>
-      <div class="card reveal"><div class="ico">&#9989;</div><h3>Eligibility &amp; Patient Access</h3><p>Front-end verification and prior authorization support that prevent denials before they happen.</p></div>
-      <div class="card reveal"><div class="ico">&#128176;</div><h3>Payment Posting</h3><p>Accurate, timely posting and reconciliation that keeps your books clean and your reporting reliable.</p></div>
-      <div class="card reveal"><div class="ico">&#128202;</div><h3>Analytics &amp; Reporting</h3><p>Real-time dashboards and KPI reporting that turn your revenue data into decisions.</p></div>
-      <div class="card reveal"><div class="ico">&#128241;</div><h3>Patient Billing &amp; Support</h3><p>Clear statements and friendly patient support that improve collections and protect your reputation.</p></div>
-      <div class="card reveal"><div class="ico">&#128737;</div><h3>Underpayment Recovery</h3><p>Contract analysis and audits that catch payer underpayments and put that money back where it belongs.</p></div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></div>
+        <h3>Medical Billing &amp; Coding</h3>
+        <p>Certified, experienced coders produce accurate, compliant claims and faster, cleaner submissions across every specialty — reducing errors that cost you revenue.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Denial Management</h3>
+        <p>Reduce denials and errors with support that stays ahead of changing payer reimbursement rules — and resolves rejections quickly to protect your cash flow.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 16v-4M12 16V8M16 16v-7"/></svg></div>
+        <h3>AR Follow-Up &amp; Recovery</h3>
+        <p>Dedicated teams pursue aging accounts and legacy AR backlogs across time zones to convert more receivables into collected cash.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Charge Entry &amp; Payment Posting</h3>
+        <p>Timely, accurate charge capture and payment posting keep your revenue cycle flowing — with reconciliation that eliminates leakage.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M17 11l2 2 4-4"/></svg></div>
+        <h3>Patient Access &amp; Pre-Registration</h3>
+        <p>Scheduling, pre-registration and eligibility verification that prevent front-end errors before they turn into downstream denials.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Patient Collections</h3>
+        <p>Accelerate patient collections with dedicated resources who use a compassionate, results-driven approach that protects the patient experience.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M7.8 4.8A3 3 0 0010 4a3 3 0 004 0 3 3 0 002.2.8A3 3 0 0020 7a3 3 0 000 4 3 3 0 000 2 3 3 0 01-1.8 2.2A3 3 0 0114 18a3 3 0 00-4 0 3 3 0 00-2.2-.8A3 3 0 014 14a3 3 0 000-4 3 3 0 010-2 3 3 0 011.8-2.2z"/></svg></div>
+        <h3>Coding Compliance &amp; Auditing</h3>
+        <p>Validate your coding and documentation with compliance and auditing services that reduce risk and protect against costly recoupments.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h.01M8 12h.01M8 16h.01M12 8h4M12 12h4M12 16h4"/></svg></div>
+        <h3>Credentialing &amp; Enrollment</h3>
+        <p>Navigate payer credentialing and enrollment so new providers start billing sooner — without the administrative bottlenecks.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></div>
+        <h3>RCM Analytics &amp; Reporting</h3>
+        <p>Real-time dashboards, trends, competitive analysis and business intelligence so you can benchmark, forecast and grow with confidence.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="block">
+<!-- PAIN POINTS -->
+<section class="section" style="background:#fff;border-block:1px solid var(--line);">
   <div class="wrap split">
     <div class="reveal">
-      <span class="eyebrow">How we work</span>
-      <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:1rem 0 .6rem">A clear path to better performance</h2>
-      <p style="color:var(--ink-soft);font-size:1.08rem">No black boxes. We start by understanding your numbers, then build a tailored process around them — and keep you informed the whole way.</p>
-      <div class="hero-actions" style="margin-top:1.6rem"><a href="contact.html" class="btn btn-primary">Start With an Assessment <span class="arrow">&rarr;</span></a></div>
+      <span class="eyebrow">Solving Common RCM Pain Points</span>
+      <h2>We identify, address and improve your revenue cycle</h2>
+      <p class="lead" style="margin-bottom:24px;">Whether it's a lack of competent staff, inefficient processes or technology that isn't properly managed, the revenue cycle is full of financial risk. It's our job to close those gaps.</p>
+      <div class="feature-list" style="margin-top:0;">
+        <div class="feature"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>Staffing challenges</h4><p>Remove the burden by outsourcing RCM functions to our experts.</p></div></div>
+        <div class="feature"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>Legacy AR &amp; system changes</h4><p>We manage legacy AR when you change practice management solutions.</p></div></div>
+        <div class="feature"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>Rising denials &amp; errors</h4><p>Stay abreast of payer reimbursement changes to reduce rework.</p></div></div>
+        <div class="feature"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><div><h4>Slow patient collections</h4><p>Accelerate collections with a dedicated, compassionate approach.</p></div></div>
+      </div>
     </div>
-    <div class="panel reveal">
-      <div class="steps">
-        <div class="step"><span class="n"></span><div><h4>Assess</h4><p>We review your current workflows, denials, and KPIs to find where revenue is leaking.</p></div></div>
-        <div class="step"><span class="n"></span><div><h4>Design</h4><p>We build a customized RCM process and technology setup mapped to your specialty.</p></div></div>
-        <div class="step"><span class="n"></span><div><h4>Execute</h4><p>Our team runs day-to-day billing, coding, and follow-up as an extension of yours.</p></div></div>
-        <div class="step"><span class="n"></span><div><h4>Optimize</h4><p>Continuous reporting and benchmarking keep performance climbing over time.</p></div></div>
+    <div class="media-card reveal">
+      <svg class="ill" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="200" cy="200" r="120" stroke="rgba(255,255,255,.18)" stroke-width="2" fill="none"/>
+        <path d="M200 80 A120 120 0 0 1 320 200" stroke="rgba(47,122,209,.8)" stroke-width="14" fill="none" stroke-linecap="round"/>
+        <path d="M320 200 A120 120 0 0 1 200 320" stroke="rgba(255,255,255,.35)" stroke-width="14" fill="none" stroke-linecap="round"/>
+        <text x="200" y="190" text-anchor="middle" fill="#fff" font-family="Bricolage Grotesque, serif" font-size="46" font-weight="800">98%</text>
+        <text x="200" y="222" text-anchor="middle" fill="rgba(207,226,247,.9)" font-family="Plus Jakarta Sans, sans-serif" font-size="15">Clean Claim Rate</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- WHY EXCEPTIONAL -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What Makes Us Exceptional</span>
+      <h2>The S.K.I.L.L. way to revenue cycle management</h2>
+    </div>
+    <div class="cards two">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></div>
+        <h3>A Customized Experience</h3>
+        <p>We redefine the RCM experience to improve profitability, convert more A/R to cash and work more efficiently. Our experts work as part of your organization and culture — giving you transparency, robust reporting and data-driven intelligence.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2M7 9l2 2 3-4 2 3 3-3"/></svg></div>
+        <h3>High-Performance Technology</h3>
+        <p>Our modern stack combines AI, automation and integrations that connect with your current software and EHR. The result is a workflow that delivers insights — so you understand your business today and in the future.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3>Decades of Niche Experience</h3>
+        <p>Strategic collaboration with revenue cycle leaders ensures we understand your organization's competitive landscape and nuances — insights that elevate your revenue potential.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18M7 13l3 3 4-6 4 4"/></svg></div>
+        <h3>Financial Clarity &amp; Prosperity</h3>
+        <p>Begin your journey to predictable revenue by assessing your current workflows. You'll receive trends, competitive analysis and business intelligence to achieve and exceed benchmarks.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block deep">
+<!-- SPECIALTIES -->
+<section class="section" style="background:#fff;border-block:1px solid var(--line);">
   <div class="wrap">
-    <div class="statband">
-      <div class="reveal"><div class="num">100%</div><div class="lbl">Software-agnostic integration</div></div>
-      <div class="reveal"><div class="num">&#8804;48h</div><div class="lbl">Typical claim submission turnaround</div></div>
-      <div class="reveal"><div class="num">40+</div><div class="lbl">Specialties supported</div></div>
-      <div class="reveal"><div class="num">Real-time</div><div class="lbl">KPI &amp; financial reporting</div></div>
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Who We Serve</span>
+      <h2>Consolidated, customized RCM for all of healthcare</h2>
+      <p class="lead">No matter your organization type or specialty, we tailor our services to your requirements and goals.</p>
+    </div>
+    <div class="chips">
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M15 20c0-2 1.5-3.5 4-3.5s3 1.5 3 3.5"/></svg></span>Physician Groups</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M10 11h4"/></svg></span>Hospitals</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a4 4 0 00-4 4c-2 0-3 2-3 4s1 4 3 4a4 4 0 008 0c2 0 3-2 3-4s-1-4-3-4a4 4 0 00-4-4z"/></svg></span>Behavioral Health</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h3l2-5 4 10 2-5h3"/></svg></span>Anesthesia</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3v6l-4 8a2 2 0 002 3h10a2 2 0 002-3l-4-8V3M9 3h6"/></svg></span>Lab &amp; Pathology</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M12 9v6M9 12h6"/></svg></span>Emergency Dept.</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-5h6v5"/></svg></span>FQHC &amp; CHC Clinics</div>
+      <div class="chip reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18 14 14 0 010-18z"/></svg></span>Senior Living</div>
     </div>
   </div>
 </section>
 
-<section class="block">
+<!-- CTA -->
+<section class="section">
   <div class="wrap">
-    <div class="cta reveal">
-      <h2>Not sure where your revenue is leaking?</h2>
-      <p>We'll run a no-obligation assessment of your revenue cycle and show you exactly where the opportunities are.</p>
-      <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Book Your Assessment <span class="arrow">&rarr;</span></a></div>
+    <div class="cta-band reveal">
+      <h2>Ready to recover more revenue?</h2>
+      <p>Let's navigate the complexities of RCM together. Request a personalized assessment of your revenue cycle today.</p>
+      <a href="contact.html" class="btn btn-light">Contact Us to Learn More</a>
     </div>
   </div>
 </section>
-<footer class="ft">
+
+<footer class="site-footer">
   <div class="wrap">
-    <div class="ft-grid">
+    <div class="footer-grid">
       <div>
-        <p class="about">Full-service revenue cycle management and medical billing for healthcare organizations — built to reduce denials, accelerate cash flow, and protect your bottom line.</p>
+        <div class="f-brand">S.K.I.L.L. RCM</div>
+        <p>We deliver end-to-end revenue cycle management designed to maximize reimbursements and drive sustainable performance — from patient access and coding to collections, denial management and analytics.</p>
       </div>
       <div>
-        <h5>Company</h5>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="who-we-serve.html">Who We Serve</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <h4>Company</h4>
+        <div class="f-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
       <div>
-        <h5>Services</h5>
-        <ul>
-          <li><a href="services.html">Medical Billing</a></li>
-          <li><a href="services.html">Coding &amp; Compliance</a></li>
-          <li><a href="services.html">A/R &amp; Denial Management</a></li>
-          <li><a href="services.html">Credentialing</a></li>
-        </ul>
+        <h4>Services</h4>
+        <div class="f-links">
+          <a href="services.html">Medical Billing &amp; Coding</a>
+          <a href="services.html">Denial Management</a>
+          <a href="services.html">AR Follow-Up</a>
+          <a href="services.html">RCM Analytics</a>
+        </div>
       </div>
       <div>
-        <h5>Get in Touch</h5>
-        <ul>
-          <li><a href="mailto:hello@skillrevenuecycle.com">contact@skillrevenuecycle.com</a></li>
-          <li><a href="contact.html">Request a Consultation</a></li>
-        </ul>
+        <h4>Get in Touch</h4>
+        <p style="margin-bottom:10px;">We'd love to hear from you. Reach out with any questions or to discuss how we can support your organization.</p>
+        <a class="f-mail" href="mailto:contact@skillrevenuecycle.com">contact@skillrevenuecycle.com</a>
       </div>
     </div>
-    <div class="ft-bottom">
-      <span>&copy; <span id="yr"></span> Skill Revenue Cycle. All rights reserved.</span>
-      <span>skillrevenuecycle.com</span>
+    <div class="footer-bottom">
+      <span>Copyright © <span data-year>2025</span> | S.K.I.L.L. Revenue Cycle Management LLC</span>
+      <span>End-to-End Revenue Cycle Management</span>
     </div>
   </div>
 </footer>
-<script>
-  // mobile menu
-  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
-  burger&&burger.addEventListener('click',()=>{menu.classList.toggle('open');});
-  // sticky header state
-  const nav=document.getElementById('nav');
-  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>10);
-  window.addEventListener('scroll',onScroll);onScroll();
-  // year
-  document.getElementById('yr').textContent=new Date().getFullYear();
-  // scroll reveal
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+
+<script src="script.js"></script>
 </body>
 </html>
