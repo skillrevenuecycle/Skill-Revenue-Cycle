@@ -101,7 +101,7 @@ ul { list-style: none; }
 }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  height: 90px;
+  height: 76px;
 }
 .brand {
   font-family: var(--font-display);
