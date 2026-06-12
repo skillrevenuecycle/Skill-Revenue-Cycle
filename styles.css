@@ -413,3 +413,5 @@ ul { list-style: none; }
   .form-card { padding: 28px; }
   .hv-stats { grid-template-columns: 1fr; }
 }
+.logo-img{height:44px;width:auto;display:block}
+@media(max-width:540px){.logo-img{height:38px}}
