@@ -413,12 +413,6 @@ ul { list-style: none; }
   .form-card { padding: 28px; }
   .hv-stats { grid-template-columns: 1fr; }
 }
-/* give the header a bit more height so a logo-with-text fits */
-.nav-inner { height: 84px; }
-
-/* THE fix — cap the logo image so it can't overflow */
 .logo img {
-  height: 56px;
-  width: auto;
-  display: block;
+  mix-blend-mode: multiply;
 }
