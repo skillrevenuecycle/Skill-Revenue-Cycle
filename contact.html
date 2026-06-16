@@ -106,22 +106,21 @@
       </div>
     </div>
 
-    <div class="form-card reveal">
-      <h3 style="font-size:1.4rem;margin-bottom:6px;">Let's start a conversation that matters</h3>
-      <p style="color:var(--muted);margin-bottom:24px;">Fill out the form and our team will be in touch.</p>
-      <form data-form>
-        <div class="field-row">
-          <div class="field"><label>Full Name *</label><input type="text" required placeholder="Your name"></div>
-          <div class="field"><label>Email *</label><input type="email" required placeholder="you@organization.com"></div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"></div>
-          <div class="field"><label>Company Name</label><input type="text" placeholder="Your organization"></div>
-        </div>
-        <div class="field"><label>Any questions or comments?</label><textarea required placeholder="How can we help?"></textarea></div>
-        <button type="submit" class="btn btn-primary" data-label="Submit" style="width:100%;justify-content:center;">Submit</button>
-        <p class="form-result form-note" style="display:none;color:var(--accent);font-weight:600;">Thank you — your message has been received. We'll be in touch soon.</p>
-      </form>
+   <form data-form>
+  <input type="hidden" name="access_key" value="ad7b842f-f183-4793-b3df-5322c9e21a05">
+  <input type="hidden" name="subject" value="New contact form submission – SKILL RCM">
+  <div class="field-row">
+    <div class="field"><label>Full Name *</label><input type="text" name="name" required placeholder="Your name"></div>
+    <div class="field"><label>Email *</label><input type="email" name="email" required placeholder="you@organization.com"></div>
+  </div>
+  <div class="field-row">
+    <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(555) 000-0000"></div>
+    <div class="field"><label>Company Name</label><input type="text" name="company" placeholder="Your organization"></div>
+  </div>
+  <div class="field"><label>Any questions or comments?</label><textarea name="message" required placeholder="How can we help?"></textarea></div>
+  <button type="submit" class="btn btn-primary" data-label="Submit" style="width:100%;justify-content:center;">Submit</button>
+  <p class="form-result form-note" style="display:none;color:var(--accent);font-weight:600;">Thank you — your message has been received. We'll be in touch soon.</p>
+</form>
     </div>
   </div>
 </section>
