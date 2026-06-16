@@ -81,20 +81,40 @@
   }
 
   // Form submit (front-end only — no backend wired yet)
-  document.querySelectorAll("form[data-form]").forEach(function (form) {
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var btn = form.querySelector("[type=submit]");
-      var note = form.querySelector(".form-result");
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
-      setTimeout(function () {
-        form.reset();
-        if (btn) { btn.disabled = false; btn.textContent = btn.getAttribute("data-label") || "Submit"; }
-        if (note) { note.style.display = "block"; }
-      }, 700);
-    });
-  });
+  document.querySelectorAll('[data-form]').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const result = form.querySelector('.form-result');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
 
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        result.style.display = 'block';
+        form.reset();
+      } else {
+        result.style.display = 'block';
+        result.style.color = '#c0392b';
+        result.textContent = 'Something went wrong. Please email us directly.';
+      }
+    } catch (err) {
+      result.style.display = 'block';
+      result.style.color = '#c0392b';
+      result.textContent = 'Network error. Please try again.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Submit';
+    }
+  });
+});
   // Footer year
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
