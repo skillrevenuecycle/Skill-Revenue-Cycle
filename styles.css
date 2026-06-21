@@ -401,7 +401,7 @@ ul { list-style: none; }
   .menu-toggle { display: flex; }
   .nav-cta .btn { display: none; }
   .hero-grid, .split, .founder, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-visual { order: -1; aspect-ratio: 1.4 / 1; }
+  .hero-visual { order: -1; aspect-ratio: auto; }
   .stats-band .stats { grid-template-columns: repeat(2, 1fr); gap: 36px 16px; }
   .section { padding: 72px 0; }
   .cta-band { padding: 48px 28px; }
