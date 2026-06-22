@@ -280,7 +280,7 @@ ul { list-style: none; }
 /* ---------- Founder ---------- */
 .founder { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center; }
 .founder-card { background: linear-gradient(160deg, var(--navy), var(--navy-3)); border-radius: 24px; padding: 44px; color: #fff; box-shadow: var(--shadow); text-align: center; }
-.founder-card .avatar { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 22px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); display: grid; place-items: center; font-family: var(--font-display); font-size: 2.4rem; color: #fff; }
+.founder-card .avatar { width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 22px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); display: grid; place-items: center; font-family: var(--font-display); font-size: 2.4rem; color: #fff; }
 .founder-card h3 { color: #fff; font-size: 1.5rem; }
 .founder-card .role { color: var(--accent-soft); font-weight: 600; margin-top: 4px; }
 .founder-card .creds { margin-top: 16px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
