@@ -19,7 +19,7 @@
   --shadow-sm: 0 4px 18px rgba(2, 27, 57, .06);
   --shadow: 0 18px 50px rgba(2, 27, 57, .12);
   --shadow-lg: 0 30px 80px rgba(2, 27, 57, .18);
-  --maxw: 900px;
+  --maxw: 1200px;
   --font-display: "Bricolage Grotesque", Georgia, serif;
   --font-body: "Plus Jakarta Sans", -apple-system, system-ui, sans-serif;
 }
